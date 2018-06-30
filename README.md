@@ -12,12 +12,7 @@ gcloud config set project <PROJECT NAME>
 ```
 1. Enable Compute Engine, Vision, Speech, Translate, and Natural Language APIs
 ```
- gcloud services enable compute.googleapis.com
- gcloud services enable vision.googleapis.com
- gcloud services enable speech.googleapis.com
- gcloud services enable translate.googleapis.com
- gcloud services enable language.googleapis.com
- gcloud services enable vision.googleapis.com
+ gcloud services enable compute.googleapis.com vision.googleapis.com speech.googleapis.com translate.googleapis.com language.googleapis.com vision.googleapis.com
 ```
 1. Create an [API key](https://cloud.google.com/docs/authentication/api-keys)
 1. Create a micro GCE instance
