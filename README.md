@@ -6,6 +6,10 @@
 ## Setup
 1. Create GCP Project
 1. Activate Google Cloud Shell
+1. Set your session to the current project
+```
+gcloud config set project <PROJECT NAME>
+```
 1. Enable Compute Engine, Vision, Speech, Translate, and Natural Language APIs
 ```
  gcloud services enable compute.googleapis.com
