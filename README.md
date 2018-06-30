@@ -17,7 +17,7 @@ gcloud config set project <PROJECT NAME>
 1. Create an [API key](https://cloud.google.com/docs/authentication/api-keys)
 1. Create a micro GCE instance
 ```
-gcloud beta compute --project=$(gcloud config get-value project) instances create speech-client --zone=us-east1-b --machine-type=f1-micro --subnet=default --scopes=https://www.googleapis.com/auth/cloud-platform --tags=https-server --image=debian-9-drawfork-v20180423 --image-project=eip-images --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=speech-client
+gcloud beta compute --project=$(gcloud config get-value project) instances create speech-client --zone=us-east1-b --machine-type=n1-standard-1 --subnet=default --scopes=https://www.googleapis.com/auth/cloud-platform --tags=https-server --image=debian-9-drawfork-v20180423 --image-project=eip-images --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=speech-client
 ```
 1. SSH into [New Instance](http://console.cloud.google.com/compute/instances)
 1. Install git
@@ -35,7 +35,7 @@ git clone https://github.com/tfrantzen/gcp-ml-walkthrough.git
 ```
 1. Open directory
 ```
-cd gcp-ml-walkthrough\streaming-client
+cd gcp-ml-walkthrough/streaming-client/
 ```
 1. Deploy application
 ```
@@ -46,12 +46,24 @@ mvn clean jetty:run
 ```
 git clone https://github.com/tfrantzen/gcp-ml-walkthrough.git
 ```
+1. Open directory
+```
+cd gcp-ml-walkthrough/client/
+```
 1. Install dependencies
 ```
 npm install
 ```
 1. Collect GCE IP Address and API Key
-1. Edit app.js, update variables
+1. Edit public\js\app.js, update variables on line 1 and 2
+```
+...
+var apiKey = '<API_KEY>';
+var speechApiIP = '<GCE_INSTANCE_EXTERNAL_IP>';
+
+
+var translateUri = `https://translation.googleapis.com/language/translate/v2?ke...
+```
 1. Deploy application
 ```
 npm start
