@@ -70,3 +70,9 @@ npm start
 ```
 1. Open the web preview
 	- You will need to navigate your speech-client GCE instance first to accept the self signed certificat
+
+
+##Sources
+1. https://codelabs.developers.google.com/codelabs/speaking-with-a-webpage/index.html?index=..%2F..%2Findex#0
+1. https://webrtc.github.io/samples/
+1. https://github.com/GoogleCloudPlatform
