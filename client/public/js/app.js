@@ -1,9 +1,9 @@
-var apiKey = 'AIzaSyCX5S9wVW26-eqWwZaLwKFvwespI_dwdoc';
-var speechApiIP = '104.154.160.223';
+var apiKey = '<API_KEY>';
+var speechApiIP = '<GCE_INSTANCE_EXTERNAL_IP>';
 
 var translateUri = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
 var translateLanguagesUri = `https://translation.googleapis.com/language/translate/v2/languages?key=${apiKey}&target=en`;
-var speechUri = `wss://${speechApiIP}:8443/transcribe`;
+var speechUri = `wss://${speechApiIP}/transcribe`;
 var nlpUri = `https://language.googleapis.com/v1/documents:analyzeEntitySentiment?key=${apiKey}`;
 var nlpDocUri = `https://language.googleapis.com/v1/documents:analyzeSentiment?key=${apiKey}`;
 var visionUri = `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
