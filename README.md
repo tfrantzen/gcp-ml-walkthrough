@@ -5,6 +5,9 @@
 ## Introduction
 This web application integrates [Google Cloud Vision](https://cloud.google.com/vision/), [Google Cloud Speech](https://cloud.google.com/speech-to-text/), [Google Cloud Translate](https://cloud.google.com/translate/), and [Google Cloud Natural Language](https://cloud.google.com/natural-language/) with [WebRTC](https://webrtc.org/) as a audio/video source.
 
+### Architecture
+![architecture](./architecture.svg)
+
 ## Pre-Requisites
 1. Need a Google Cloud Platform Account
 
