@@ -21,7 +21,7 @@ This web application integrates [Google Cloud Vision](https://cloud.google.com/v
 	```
 1. Create an [API key](https://cloud.google.com/docs/authentication/api-keys)
 
-### Create Speech Client Compute Engine
+### Speech Client Compute Engine
 This application uses Cloud Speech with a streaming client. To connect with the Streaming API, you will need to create a GCE instance to setup a secure web socket. This was originally setup using the [Speaking with a Webpage](https://codelabs.developers.google.com/codelabs/speaking-with-a-webpage/index.html?index=..%2F..%2Findex#0) codelab.
 
 1. Create a micro GCE instance
@@ -50,6 +50,8 @@ This application uses Cloud Speech with a streaming client. To connect with the 
 	```
 	mvn clean jetty:run
 	```
+	
+### ML Walkthrough Application
 1. Open the Google Cloud Shell
 1. Clone project
 	```
@@ -81,7 +83,7 @@ This application uses Cloud Speech with a streaming client. To connect with the 
 	- You will need to navigate your speech-client GCE instance first to accept the self signed certificat
 
 
-##Sources
+## Sources
 1. https://codelabs.developers.google.com/codelabs/speaking-with-a-webpage/index.html?index=..%2F..%2Findex#0
 1. https://webrtc.github.io/samples/
 1. https://github.com/GoogleCloudPlatform
