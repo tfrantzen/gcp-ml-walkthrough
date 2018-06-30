@@ -1,0 +1,6 @@
+runtime: custom
+env: flex
+
+env_variables:
+  APP_ID: ceaas-demo-mysql-dlp-gae
+  SERVER_URL: https://ceaas-demo-mysql-dlp-gae.appspot.com/

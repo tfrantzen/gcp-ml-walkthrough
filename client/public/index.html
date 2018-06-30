@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Google ML Walkthrough Demo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="public/css/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="left-half">
+		<video id="gum-local" autoplay playsinline muted style="width:100%"></video>
+		<canvas id="video_canvas" style="position:absolute; top:0;left:0; z-index:10;"></canvas>
+	</div>
+
+	<div id='results' class="right-half">
+		<div class="tab" style="display: table;">
+			<div class='imgBlock' style='border:3px solid black;' id='visionSelected'>
+				<img src="public/images/vision.svg" alt="Cloud Vision API" class="techlinks" onclick="openTech(this, 'vision')" />
+				<figcaption style="text-align:center;">Vision API</figcaption>
+			</div>
+			<div class='imgBlock'>
+				<img src="public/images/speech.svg" alt="Cloud Speech API" class="techlinks" onclick="openTech(this, 'speech')" />
+				<figcaption style="text-align:center;">Speech API</figcaption>
+			</div>
+			<div class='imgBlock'>
+				<img src="public/images/translate.svg" alt="Cloud Translation API" class="techlinks" onclick="openTech(this, 'translate')" />
+				<figcaption style="text-align:center;">Translation API</figcaption>
+			</div>
+			<div class='imgBlock'>
+				<img src="public/images/nlp.svg" alt="Cloud Natural Language Processing API" class="techlinks" onclick="openTech(this, 'nlp')" />
+				<figcaption style="text-align:center;">NLP API</figcaption>
+			</div>
+		</div>
+
+		<div id="vision" class="techcontent">
+			<h3 style="padding-top:10px; padding-left:10px;">
+				Clicking 'Take Picture' will capture an image and analyze it against the Google Cloud Vision API
+			</h3>
+			<div style="padding-left:20px; padding-bottom:20px;">
+				<button onclick="takePicture();">Take Picture</button>
+			</div>
+			<div class="tab" style='padding: 10px;'>
+				<button class="tablinks" onclick="openTab('Faces')">Faces</button>
+				<button class="tablinks" onclick="openTab('Labels')">Labels</button>
+			</div>
+
+			<div id="Faces" class="tabcontent">
+				<div id='expressionTable'></div>
+			</div>
+
+			<div id="Labels" class="tabcontent">
+				<div id='labelTable'></div>
+			</div>
+		</div>
+
+		<div id="speech" class="techcontent" style="visibility:hidden;">
+			<div id="transcript" style="line-height:60px;font-size:36px;padding-top:20px;text-align:center;">
+			</div>
+		</div>
+
+		<div id="translate" class="techcontent" style="visibility:hidden;">
+			<div style="text-align: center;width:100%;">
+				<div style="padding-top:5px;padding-bottom:10px;">Select Language:</div>
+				<select style="width:40%" id="supportedLang"></select>
+				<div id="translate_transcript" style="line-height:60px;font-size:36px;padding-top:20px;">
+				</div>
+			</div>
+		</div>
+
+		<div id="nlp" class="techcontent" style="visibility:hidden;">
+			<div style="text-align: center;width:100%;">
+				<div id="nlp_transcript" style="line-height:60px;font-size:36px;padding-top:20px;padding-bottom:20px;"></div>
+				<div id='body_sentiment'></div>
+				<div style='padding-top:20px;'>
+					<div id='sentimentTable'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<canvas id="canvas" style="visibility:hidden;"></canvas>
+	<script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="public/js/app.js"></script>
+</body>
+</html>

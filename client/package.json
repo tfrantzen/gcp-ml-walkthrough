@@ -1,0 +1,19 @@
+{
+  "name": "ceaas-demo-vision",
+  "version": "1.0.0",
+  "description": "CEaaS Demo Vision App",
+  "main": "index.js",
+  "license": "",
+  "dependencies": {
+    "body-parser": "^1.0.0",
+    "express": "~4.11.x",
+    "ws": "^4.1.0",
+    "wss": "^3.0.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=4.3"
+  }
+}
