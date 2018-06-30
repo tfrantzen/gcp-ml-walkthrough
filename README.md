@@ -1,9 +1,9 @@
 # Google Cloud ML Walkthrough Demo
 
-##Pre-Requisites
+## Pre-Requisites
 1. Need a GCP Account
 
-##Setup
+## Setup
 1. Create GCP Project
 1. Activate Google Cloud Shell
 1. Enable Compute Engine, Vision, Speech, Translate, and Natural Language APIs
