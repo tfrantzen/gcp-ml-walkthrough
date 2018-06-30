@@ -1,7 +1,14 @@
+author: tfrantzen@google.com
+date created: 06/30/2018
+
+*\*This is not an official GCP repository*
 # Google Cloud ML Walkthrough Demo
 
+## Introduction
+This web application integrates [Google Cloud Vision](https://cloud.google.com/vision/), [Google Cloud Speech](https://cloud.google.com/speech-to-text/), [Google Cloud Translate](https://cloud.google.com/translate/), and [Google Cloud Natural Language](https://cloud.google.com/natural-language/) with [WebRTC](https://webrtc.org/) as a audio/video source.
+
 ## Pre-Requisites
-1. Need a GCP Account
+1. Need a Google Cloud Platform Account
 
 ## Setup
 1. Create GCP Project
