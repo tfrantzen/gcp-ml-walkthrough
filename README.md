@@ -1,7 +1,5 @@
-author: tfrantzen@google.com
-date created: 06/30/2018
-
 *\*This is not an official GCP repository*
+
 # Google Cloud ML Walkthrough Demo
 
 ## Introduction
