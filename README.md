@@ -25,7 +25,7 @@ This web application integrates [Google Cloud Vision](https://cloud.google.com/v
 1. Create an [API key](https://cloud.google.com/docs/authentication/api-keys)
 
 ### Speech Client Compute Engine
-This application uses Google Cloud Speech streaming API. In order to stream audio from the web application to the Speech API, you will need to create a GCE instance to setup a secure web socket. This was originally setup using the [Speaking with a Webpage](https://codelabs.developers.google.com/codelabs/speaking-with-a-webpage/index.html?index=..%2F..%2Findex#0) codelab.
+This application uses [Google Cloud Speech streaming API](https://cloud.google.com/speech-to-text/docs/streaming-recognize). In order to stream audio from the web application to the Speech API, you will need to create a GCE instance to setup a secure web socket. This was originally setup using the [Speaking with a Webpage](https://codelabs.developers.google.com/codelabs/speaking-with-a-webpage/index.html?index=..%2F..%2Findex#0) codelab.
 
 1. Create a micro GCE instance
 	```
