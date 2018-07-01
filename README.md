@@ -9,10 +9,10 @@ This web application integrates [Google Cloud Vision](https://cloud.google.com/v
 ![architecture](./architecture.svg)
 
 ## Pre-Requisites
-1. Need a Google Cloud Platform Account
+1. Need a Google Cloud Platform account
 
 ## Setup
-1. Create GCP Project
+1. Create [GCP Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
 1. Activate Google Cloud Shell
 1. Set your session to the current project
 	```
@@ -31,13 +31,13 @@ This application uses Cloud Speech with a streaming client. To connect with the 
 	```
 	gcloud beta compute --project=$(gcloud config get-value project) instances create speech-client --zone=us-east1-b --machine-type=n1-standard-1 --subnet=default --scopes=https://www.googleapis.com/auth/cloud-platform --tags=https-server --image=debian-9-drawfork-v20180423 --image-project=eip-images --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=speech-client
 	```
-1. SSH into [New Instance](http://console.cloud.google.com/compute/instances)
-1. Install git
+1. SSH into the [new instance](http://console.cloud.google.com/compute/instances)
+1. Install git and maven
 	```
 	sudo apt-get update
 	sudo apt-get install -y maven openjdk-8-jdk git
 	```
-1. In order to access speech client, you will need to open a port in the Firewall
+1. In order to access the speech client, you will need to open a port in the Firewall
 	```
 	gcloud compute firewall-rules create dev-ports --allow=tcp:8443 --source-ranges=0.0.0.0/0
 	```
@@ -83,7 +83,7 @@ This application uses Cloud Speech with a streaming client. To connect with the 
 	npm start
 	```
 1. Open the web preview
-	- You will need to navigate your speech-client GCE instance first to accept the self signed certificat
+	- You will need to navigate your speech-client GCE instance first to accept the self signed certificate
 
 
 ## Sources
