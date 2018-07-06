@@ -29,7 +29,7 @@ This application uses [Google Cloud Speech streaming API](https://cloud.google.c
 
 1. Create a micro GCE instance
 	```
-	gcloud beta compute --project=$(gcloud config get-value project) instances create speech-client --zone=us-east1-b --machine-type=n1-standard-1 --subnet=default --scopes=https://www.googleapis.com/auth/cloud-platform --tags=https-server --image=debian-9-drawfork-v20180423 --image-project=eip-images --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=speech-client
+	gcloud beta compute --project=$(gcloud config get-value project) instances create speech-client --zone=us-east1-b --machine-type=n1-standard-1 --subnet=default --scopes=https://www.googleapis.com/auth/cloud-platform --tags=https-server --image=debian-9-stretch-v20180611 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=speech-client
 	```
 1. SSH into the [new instance](http://console.cloud.google.com/compute/instances)
 1. Install git and maven
