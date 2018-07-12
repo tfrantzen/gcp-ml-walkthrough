@@ -51,7 +51,7 @@ This application uses [Google Cloud Speech streaming API](https://cloud.google.c
 	```
 1. Deploy application
 	```
-	mvn clean jetty:run
+	sudo mvn clean jetty:run
 	```
 	
 ### ML Walkthrough Application
