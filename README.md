@@ -39,7 +39,7 @@ This application uses [Google Cloud Speech streaming API](https://cloud.google.c
 	```
 1. In order to access the speech client, you will need to open a port in the Firewall
 	```
-	gcloud compute firewall-rules create dev-ports --allow=tcp:8443 --source-ranges=0.0.0.0/0
+	gcloud compute firewall-rules create dev-ports --allow=tcp:443 --source-ranges=0.0.0.0/0
 	```
 1. Clone this project
 	```
