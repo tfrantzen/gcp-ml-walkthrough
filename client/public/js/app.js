@@ -16,43 +16,34 @@ var language = document.getElementById("supportedLang");
 
 // Audio variables
 var context = new AudioContext();
+var analyser;
+
+const SAMPLE_RATE = 48000; // per https://g.co/cloud/speech/reference/rest/v1beta1/RecognitionConfig
+const SAMPLE_SIZE = 24; // per https://g.co/cloud/speech/reference/rest/v1beta1/RecognitionConfig
 
 // Video variables
-var expressionList = [{
-	caption: 'Joy',
-	id: 'joyLikelihood'
-}, {
-	caption: 'Sorrow',
-	id: 'sorrowLikelihood'
-}, {
-	caption: 'Anger',
-	id: 'angerLikelihood'
-}, {
-	caption: 'Surprise',
-	id: 'surpriseLikelihood'
-}, {
-	caption: 'Under Exposed',
-	id: 'underExposedLikelihood'
-}, {
-	caption: 'Blurred',
-	id: 'blurredLikelihood'
-}, {
-	caption: 'Headwear',
-	id: 'headwearLikelihood'
-}];
+var expressionList = [
+	{caption: 'Joy', id:'joyLikelihood'}, 
+	{caption: 'Sorrow', id:'sorrowLikelihood'}, 
+	{caption: 'Anger', id:'angerLikelihood'}, 
+	{caption: 'Surprise', id:'surpriseLikelihood'},
+	{caption: 'Under Exposed', id:'underExposedLikelihood'}, 
+	{caption: 'Blurred', id:'blurredLikelihood'}, 
+	{caption: 'Headwear', id:'headwearLikelihood'}
+];
 
 // WebRTC variables
 var constraints = window.constraints = {
-	video: true,
-	audio: {
-		echoCancellation: true,
-		channelCount: 1,
-		sampleRate: {
-			ideal: 48000 // per https://g.co/cloud/speech/reference/rest/v1beta1/RecognitionConfig
-		},
-		sampleSize: 24 // per https://g.co/cloud/speech/reference/rest/v1beta1/RecognitionConfig
-	}
-};
+  video: true,
+  audio: {
+      echoCancellation: true,
+      channelCount: 1,
+      sampleRate: {
+        ideal: SAMPLE_RATE
+      },
+      sampleSize: SAMPLE_SIZE
+    }
+};    
 
 function handleSuccess(stream) {
 	startVideo(stream);
@@ -373,6 +364,12 @@ function openTab(tabName) {
 
 // Opens GCP Vision Tech UI Tab
 function openTech(el, tabName) {
+    if(tabName != 'vision') {
+		context.resume().then(function() {
+	      	console.log('recording streaming audio');
+	    });  
+	}
+
 	var i;
 	var techContents = document.getElementsByClassName("techcontent");
 	var techLinks = document.getElementsByClassName("techlinks");
